@@ -59,8 +59,8 @@ contract Staking is Referral{
   function calculateReward(uint apy, address stakeHolder) public {
       require(!depositQueue[stakeHolder].isEmpty());
         uint256 time = depositQueue[stakeHolder].returnFirstTime();
-     while(block.timestamp - time >= 30 seconds){
-         depositQueue[stakeHolder].enqueue(depositQueue[stakeHolder].returnFirstAmount(), time + 30 seconds);
+     while(block.timestamp - time >= 30 days){
+         depositQueue[stakeHolder].enqueue(depositQueue[stakeHolder].returnFirstAmount(), time + 30 days);
         rewards[stakeHolder] += depositQueue[stakeHolder].returnFirstAmount()*apy/uint(100);
         depositQueue[stakeHolder].dequeue();
         

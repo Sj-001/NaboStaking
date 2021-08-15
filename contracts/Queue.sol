@@ -7,7 +7,7 @@ contract Queue {
     uint256 public last = 0;
     struct Data{
         uint amount;
-        uint256 timestamp;
+        uint256 timestamp;        
     }
     
     constructor() {
