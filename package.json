@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Sj-001/NaboStaking#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "truffle-hdwallet-provider": "^1.0.17"
+    "@truffle/hdwallet-provider": "^1.4.3",
+    "dotenv": "^10.0.0"
   }
 }

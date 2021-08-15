@@ -8,6 +8,5 @@ module.exports = async function (deployer, network, addresses) {
 
     const livToken = await LivToken.deployed();
 
-    await deployer.deploy(StakingLiv, livToken.address);
-
+    await deployer.deploy(StakingLiv, livToken.address)
 }
